@@ -597,7 +597,7 @@ void ofdmflexframesync_rxpayload(ofdmflexframesync _q,
                 _q->framestats.rssi             = ofdmframesync_get_rssi(_q->fs);
                 _q->framestats.cfo              = ofdmframesync_get_cfo(_q->fs);
                 _q->framestats.framesyms        = NULL;
-                _q->framestats.num_framesyms    = 0;
+                _q->framestats.num_framesyms    = _q->symbol_counter;
                 _q->framestats.mod_scheme       = _q->ms_payload;
                 _q->framestats.mod_bps          = _q->bps_payload;
                 _q->framestats.check            = _q->check;
